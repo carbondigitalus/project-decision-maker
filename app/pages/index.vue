@@ -1,14 +1,14 @@
 <template>
-    <div class="min-h-screen flex items-center justify-center">
-        <div class="p-8 rounded-lg shadow-lg w-1/2 flex-col items-center justify-center">
-            <h1 class="capitalize text-3xl font-bold mb-4 text-center">Project Decision Maker</h1>
-            <p class="mb-6 mx-auto text-white text-lg w-1/2">
+    <div class="min-h-screen flex items-center justify-center px-4">
+        <div class="p-4 md:p-8 rounded-lg shadow-lg w-full md:w-3/4 lg:w-1/2 flex-col items-center justify-center">
+            <h1 class="capitalize text-2xl md:text-3xl font-bold mb-4 text-center">Project Decision Maker</h1>
+            <p class="mb-6 mx-auto text-white text-base md:text-lg w-full md:w-2/3 lg:w-1/2 text-center">
                 The classic project management dilemma: you can pick any two, but never all three. Select your
                 priorities and discover what you'll have to sacrifice.
             </p>
-            <div class="mx-auto w-60">
+            <div class="mx-auto w-full max-w-xs">
                 <form>
-                    <label class="relative flex justify-between items-center group p-2 text-xl text-white">
+                    <label class="relative flex justify-between items-center group p-2 text-lg md:text-xl text-white">
                         Good
                         <input
                             type="checkbox"
@@ -19,7 +19,7 @@
                             class="w-16 h-8 flex items-center flex-shrink-0 ml-4 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-green-400 after:w-6 after:h-6 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-8 group-hover:after:translate-x-1"
                         ></span>
                     </label>
-                    <label class="relative flex justify-between items-center group p-2 text-xl text-white">
+                    <label class="relative flex justify-between items-center group p-2 text-lg md:text-xl text-white">
                         Fast
                         <input
                             type="checkbox"
@@ -30,7 +30,7 @@
                             class="w-16 h-8 flex items-center flex-shrink-0 ml-4 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-green-400 after:w-6 after:h-6 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-8 group-hover:after:translate-x-1"
                         ></span>
                     </label>
-                    <label class="relative flex justify-between items-center group p-2 text-xl text-white">
+                    <label class="relative flex justify-between items-center group p-2 text-lg md:text-xl text-white">
                         Cheap
                         <input
                             type="checkbox"
@@ -43,13 +43,13 @@
                     </label>
                 </form>
             </div>
-            <div class="mt-6 relative min-h-[200px] mx-auto w-2/3">
+            <div class="mt-6 relative min-h-[300px] md:min-h-[250px] mx-auto w-full md:w-3/4 lg:w-2/3">
                 <div
                     v-if="formState.good && formState.cheap"
                     class="absolute inset-0"
                 >
-                    <h2 class="mb-1 text-2xl">Good-Cheap (Sacrificing Fast)</h2>
-                    <p class="text-white text-lg">
+                    <h2 class="mb-2 text-xl md:text-2xl text-green-400 font-semibold">Good-Cheap (Sacrificing Fast)</h2>
+                    <p class="text-white text-sm md:text-base lg:text-lg leading-relaxed">
                         Exceptional creative and strategic work within budget constraints requires patience. Our team
                         will craft compelling campaigns, optimize every touchpoint, and A/B test until performance
                         peaks—but on a sustainable timeline. Budget-friendly retainers mean scheduled sprints, shared
@@ -62,8 +62,8 @@
                     v-if="formState.good && formState.fast"
                     class="absolute inset-0"
                 >
-                    <h2 class="mb-1 text-2xl">Good-Fast (Sacrificing Cheap)</h2>
-                    <p class="text-white text-lg">
+                    <h2 class="mb-2 text-xl md:text-2xl text-green-400 font-semibold">Good-Fast (Sacrificing Cheap)</h2>
+                    <p class="text-white text-sm md:text-base lg:text-lg leading-relaxed">
                         You need a high-performing campaign launched immediately? Premium pricing is non-negotiable.
                         Rush timelines mean dedicated teams working overtime, expedited design reviews, and priority
                         access to our senior strategists. We'll pull developers from other projects, fast-track content
@@ -75,8 +75,8 @@
                     v-if="formState.fast && formState.cheap"
                     class="absolute inset-0"
                 >
-                    <h2 class="mb-1 text-2xl">Fast-Cheap (Sacrificing Good)</h2>
-                    <p class="text-white text-lg">
+                    <h2 class="mb-2 text-xl md:text-2xl text-green-400 font-semibold">Fast-Cheap (Sacrificing Good)</h2>
+                    <p class="text-white text-sm md:text-base lg:text-lg leading-relaxed">
                         Need a campaign live by Monday without blowing your budget? We'll get you there, but expect
                         template-driven solutions and minimal customization. Stock photography, pre-built landing pages,
                         basic SEO, and out-of-the-box analytics. Testing will be light, refinements will be minimal, and
