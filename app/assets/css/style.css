@@ -1,0 +1,15 @@
+body {
+    background-color: oklch(12.9% 0.042 264.695);
+}
+
+h1,
+h2,
+h3 {
+    color: #00dc82;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
