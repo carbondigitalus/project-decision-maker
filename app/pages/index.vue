@@ -92,6 +92,17 @@
 <script setup lang="ts">
 import { reactive, computed, watch } from 'vue';
 
+useHead({
+    title: 'Project Decision Maker',
+    meta: [
+        {
+            name: 'description',
+            content:
+                "The classic project management dilemma: you can pick any two, but never all three. Select your priorities and discover what you'll have to sacrifice.",
+        },
+    ],
+});
+
 const formState = reactive({
     good: false,
     fast: false,
